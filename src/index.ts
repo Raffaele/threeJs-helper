@@ -74,22 +74,24 @@ gui.add(params, 'isGridHelperZVisible').name('Grid Helper Z').onChange((value: b
   gridHelperZ.visible = value;
 });
 
-gui.add(params, 'isCubeAxesHelperVisible').name('Cube Axes Helper').onChange((value: boolean) => {
+const cubeFolder = gui.addFolder('Cube Controls');
+
+cubeFolder.add(params, 'isCubeAxesHelperVisible').name('Cube Axes Helper').onChange((value: boolean) => {
   cube.children[0].visible = value;
 });
 
-gui.add(params, 'isCubeVisible').name('Cube').onChange((value: boolean) => {
+cubeFolder.add(params, 'isCubeVisible').name('Cube').onChange((value: boolean) => {
   cube.visible = value;
 });
 
-gui.add(params, 'cubeX', -10, 10).name('Cube X').onChange((value: number) => {
+cubeFolder.add(params, 'cubeX', -10, 10).name('Cube X').onChange((value: number) => {
   cube.position.x = value;
 });
 
-gui.add(params, 'cubeY', -10, 10).name('Cube Y').onChange((value: number) => {
+cubeFolder.add(params, 'cubeY', -10, 10).name('Cube Y').onChange((value: number) => {
   cube.position.y = value;
 });
 
-gui.add(params, 'cubeZ', -10, 10).name('Cube Z').onChange((value: number) => {
+cubeFolder.add(params, 'cubeZ', -10, 10).name('Cube Z').onChange((value: number) => {
   cube.position.z = value;
 });
