@@ -2,7 +2,6 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import * as dat from 'dat.gui';
 
-
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
@@ -95,3 +94,6 @@ cubeFolder.add(params, 'cubeY', -10, 10).name('Cube Y').onChange((value: number)
 cubeFolder.add(params, 'cubeZ', -10, 10).name('Cube Z').onChange((value: number) => {
   cube.position.z = value;
 });
+
+setTimeout(() => alert('Zoom and drag to see the scene from different angles. Use the GUI to toggle helpers and move the cube.'), 1000);
+
