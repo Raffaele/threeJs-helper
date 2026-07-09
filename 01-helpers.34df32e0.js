@@ -717,7 +717,6 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 var _three = require("three");
 var _orbitControls = require("three/examples/jsm/controls/OrbitControls");
 var _datGui = require("dat.gui");
-setTimeout(()=>alert('Zoom and drag to see the scene from different angles. Use the GUI to toggle helpers and move the cube.'), 0);
 const renderer = new _three.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
@@ -792,6 +791,7 @@ cubeFolder.add(params, 'cubeY', -10, 10).name('Cube Y').onChange((value)=>{
 cubeFolder.add(params, 'cubeZ', -10, 10).name('Cube Z').onChange((value)=>{
     cube.position.z = value;
 });
+setTimeout(()=>alert('Zoom and drag to see the scene from different angles. Use the GUI to toggle helpers and move the cube.'), 1000);
 
 },{"three":"dsoTF","three/examples/jsm/controls/OrbitControls":"45ipX","dat.gui":"329hF"}],"dsoTF":[function(require,module,exports,__globalThis) {
 /**
